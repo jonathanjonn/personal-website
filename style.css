@@ -16,7 +16,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 22px 15%;
+    padding: 1% 15%;
     border-bottom: 1px solid transparent;
     transition: all .45s ease;
     background-color: #66545e;
@@ -24,12 +24,12 @@ header{
 
 body{
     background:#a39193;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
 .logo{
-    font-size: 35px;
+    font-size: 200%;
     font-weight: 700;
     letter-spacing: 1px;
     color: 	#f6e0b5;
@@ -45,7 +45,7 @@ body{
 }
 
 .navBar a{
-    font-size: 17px;
+    font-size: 125%;
     font-weight: 500;
     margin: 0 25px;
     color: 	#f6e0b5;
@@ -56,16 +56,20 @@ body{
     color: beige;
 }
 section{
-    padding: 160px 15% 120px;
+    padding: 10% 15% 10%;
+    width: auto;
+    height: auto;
 }
 
 .home{
     position: relative;
     height: auto;
-    width: 100%;
-    display: flex;
+    width: auto;
+    display: grid;
     align-items: center;
+    grid-template-columns: repeat(2,2fr);
     justify-content: flex-start;
+    gap: 1.5 rem;
 }
 
 .text{
@@ -76,6 +80,7 @@ section{
 
 .one{
     display: inline-block;
+    margin-top: 20%;
     margin-right: 15px;
     height: 32px;
     padding: 0 15px;
@@ -125,7 +130,8 @@ section{
     width: 100%;
     border-radius: 8px;
     transition: 1s ease;
-    margin-left: 30vh;
+    gap: 3 rem;
+    display: grid;
 }
 
 .homeimg img:hover{
@@ -168,7 +174,7 @@ header.fix{
     align-items: center;
     gap: 1.5rem;
     background-color: #aa6f73;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -189,13 +195,14 @@ header.fix{
 
 .abouttxt h2{
     line-height: 1;
+
 }
   
 .abouttxt h4{
     font-size: 24 px;
     font-weight: 600;
     line-height: 1.7;
-    margin: 15px 0 30px;
+    margin:0.5% 0 5%;
 }
 
 .abouttxt p{
@@ -222,6 +229,7 @@ header.fix{
 
 .service{
     background: #eea990;
+    max-width: 100%;
     height: auto;
 }
 
@@ -233,6 +241,11 @@ header.fix{
     font-size: 40px;
     line-height: 1;
     margin-bottom: 30px;
+}
+
+.service p {
+    line-height: 100%;
+    font-size: 85%;
 }
 
 .service-content{
@@ -250,8 +263,8 @@ header.fix{
 
 .box{
     background: #f6e0b5;
-    padding: 35px 45px;
-    border-radius: 8px;
+    padding: 7% 10%;
+    border-radius: 10%;
     max-width: 400px;
     height: 400px;
     transition: all .45s ease;
@@ -282,13 +295,93 @@ header.fix{
     width: 100%;
 }
 
-.contact{
+
+
+.porto-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    align-items: center;
+    gap: 8rem;
+}
+
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.row-t img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    max-width: 300px;
+    max-height: 500px;
     height: auto;
+    transition: 1s ease;
+}
+
+.row-r img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    max-width: 500px;
+    max-height: 300px;
+    height: auto;
+    transition: 1s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),#eea990);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    font-size: 1 rem;
+    line-height: 1.8;
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .layer{
+    height: 100%;
+}
+
+.contact{
+    height: 100%;
     width: 100%;
     background: #f6e0b5;
 }
 
 .sosmed{
    text-align: center;
+   gap: 1.5rem;
+   display: grid;
+   align-items: center;
+   gap: 2.5rem;
 }
 
